@@ -1,5 +1,5 @@
 package JacksonJacobs;
-
+//this is the indicator
 public class Jjacobslib {
     public static boolean isPalindrome(String input)
     {
