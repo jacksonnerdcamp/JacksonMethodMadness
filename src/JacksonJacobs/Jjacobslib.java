@@ -19,4 +19,41 @@ public class Jjacobslib {
         output = output + mainStr.substring(secondSubIndex);
         return output;
     }
+
+    public static int sumUpTo(int input)
+    {
+        int output = 0;
+        for(int counter = 0; counter <= input; counter++)
+        {
+            output += counter;
+        }
+        return output;
+    }
+
+    public static boolean isPrime(int input)
+    {
+        int output = 0;
+        for (int n = 2; n < input; n++) {
+            if (input % n == 0) {
+                output++;
+                break;
+            }
+        }
+        if (output == 0) return true;
+        else return false;
+    }
+
+    public static int primePrinter(int num)
+    {
+        int counter = 0;
+        for(int n = 3; n <= num; n++)
+        {
+            if(isPrime(n))
+            {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }
