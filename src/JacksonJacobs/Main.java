@@ -3,7 +3,7 @@ package JacksonJacobs;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.printIn("palindrome: " + Jjacobslib.isPalindrome("good"));
-        System.out.printIn()
+        System.out.print("palindrome: " + Jjacobslib.isPalindrome("bgffgb"));
+        System.out.print("cutOut:" + Jjacobslib.cutOut("jackson", "ck"));
     }
 }
