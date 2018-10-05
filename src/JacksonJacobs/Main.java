@@ -8,5 +8,6 @@ public class Main {
         System.out.println("sumUpTo: " + Jjacobslib.sumUpTo(2156));
         System.out.println("primePrinter: " + Jjacobslib.primePrinter(12));
         System.out.println("dateStr: " + Jjacobslib.dateStr("02/27/2001"));
+        System.out.println("keyRepeated: " + Jjacobslib.vigCipher("this is a secret messag", "abcd"));
     }
 }

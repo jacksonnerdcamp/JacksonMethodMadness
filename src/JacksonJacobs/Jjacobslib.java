@@ -73,4 +73,18 @@ public class Jjacobslib {
         return input.substring(3,5) + " - " + input.substring(0,2) + " - " + input.substring(6);
     }
 
+    //Extra Credit Problems Begin Here
+    public static String vigCipher(String message, String key)
+    {
+        String output = "";
+        String alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+        String keyRepeated = "";
+        for(int n = 0; n < message.length(); n += key.length())
+        {
+            keyRepeated = keyRepeated + key;
+        }
+        System.out.println(message.length());
+        System.out.println(keyRepeated.length());
+        return keyRepeated;
+    }
 }
