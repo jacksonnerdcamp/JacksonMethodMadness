@@ -79,12 +79,29 @@ public class Jjacobslib {
         String output = "";
         String alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
         String keyRepeated = "";
+        int cipherKey;
+        int messageAlphaIndex;
+        int keyIndex = 0;
         for(int n = 0; n < message.length(); n += key.length())
         {
             keyRepeated = keyRepeated + key;
         }
-        System.out.println(message.length());
-        System.out.println(keyRepeated.length());
-        return keyRepeated;
+        //the for loop will cycle through each character in the message and find its alphabet index.
+        //within the loop, the cypherKey will be defined with alphabet.indexOf(keyRepeated.substring(keyIndex, keyIndex + 1)
+        for (int n = 0; n < message.length(); n++)
+        {
+            if(message.substring(n, n + 1).equals(" "))
+            {
+                output = output + " ";
+            }
+            else
+            {
+                cipherKey = alphabet.indexOf(keyRepeated.substring(keyIndex, keyIndex + 1));
+                messageAlphaIndex = alphabet.indexOf(message.substring(n, n + 1));
+                output = output + alphabet.substring(messageAlphaIndex + cipherKey, messageAlphaIndex + cipherKey + 1);
+            }
+            keyIndex++;
+        }
+        return output;
     }
 }
